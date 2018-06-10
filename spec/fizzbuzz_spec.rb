@@ -20,8 +20,17 @@ describe 'fizzbuzz' do
   it "returns 'fizzbuzz' when passed a number that is divisible by 3 and 5" do
     expect(fizzbuzz(15)).to eq "fizzbuzz"
   end
+
   it "doesn't return 'fizzbuzz' if passed something not divisible by both 3 and 5" do
     expect(fizzbuzz(16)).to_not eq "fizzbuzz"
+  end
+
+  it "returns the given number if it is not divisible by 3 or 5" do
+    expect(fizzbuzz(1)).to eq 1
+  end
+
+  it "does not return the number if it is divisible by 3 or 5" do
+    expect(fizzbuzz(3)).to_not eq 3
   end
 end
 
